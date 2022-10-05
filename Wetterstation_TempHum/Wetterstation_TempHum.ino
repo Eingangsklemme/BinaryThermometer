@@ -28,8 +28,12 @@ void loop() {
 
   digitalWrite(3, HIGH);
 
+  delay(3000);
+
   dht.readTemperature();
   dht.readHumidity();
+
+  delay(3000);
 
   if (isnan(dht.humidity) || isnan(dht.temperature_C)) {
     Serial.println("AM2302 sensor read failure!");
@@ -38,6 +42,8 @@ void loop() {
 
   temp = (int)dht.temperature_C;
   humid = (int)dht.humidity;
+
+  delay(3000);
 
 
   Serial.print("Temp: ");
