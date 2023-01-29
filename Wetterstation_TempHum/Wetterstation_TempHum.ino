@@ -28,8 +28,6 @@ void loop() {
 
   digitalWrite(3, HIGH);
 
-  delay(3000);
-
   dht.readTemperature();
   dht.readHumidity();
 
